@@ -1,16 +1,16 @@
 public class RewardValue {
-  double cash;
-  double miles;
+    private final double cash;
+    public static final double miles = 0.0035;
 
-  RewardValue(double valInCash) {
-    this.cash = valInCash;
-  }
+    public RewardValue(double cashVal) {
+        this.cash = cashVal;
+    }
 
-  public void getCashValue() {
-    System.out.println(this.cash);
-  }
+    public double getCashValue() {
+        return this.cash;
+    }
 
-  public double getMilesValue() {
-    return this.cash *= 0.0035;
-  }
+    public int getMilesValue() {
+        return (int) (this.cash / miles);
+    }
 }
